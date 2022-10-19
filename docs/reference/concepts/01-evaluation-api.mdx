@@ -20,6 +20,7 @@ Before you can start evaluating flags, you must set a [_provider_](./provider). 
 ```ts
 import { OpenFeature } from '@openfeature/js-sdk';
 
+// configure a provider
 OpenFeature.setProvider(new YourProviderOfChoice());
 ```
 
@@ -29,6 +30,7 @@ OpenFeature.setProvider(new YourProviderOfChoice());
 ```java
 import dev.openfeature.javasdk.OpenFeatureAPI;
 
+// configure a provider
 OpenFeatureAPI api = OpenFeatureAPI.getInstance();
 api.setProvider(new YourProviderOfChoice());
 ```
@@ -39,6 +41,7 @@ api.setProvider(new YourProviderOfChoice());
 ```csharp
 using OpenFeature;
 
+// configure a provider
 Api.Instance.SetProvider(new YourProviderOfChoice());
 ```
 
@@ -46,6 +49,7 @@ Api.Instance.SetProvider(new YourProviderOfChoice());
 <TabItem value="go" label="Go">
 
 ```go
+// configure a provider
 openfeature.SetProvider(MyFeatureProvider{})
 ```
 
@@ -62,6 +66,8 @@ each with different configuration to fit the needs of different sub-modules. Cli
 <TabItem value="js" label="TypeScript">
 
 ```ts
+
+// create a client
 const client = OpenFeature.getClient('my-app');
 ```
 
@@ -69,6 +75,8 @@ const client = OpenFeature.getClient('my-app');
 <TabItem value="java" label="Java">
 
 ```java
+
+// create a client
 Client client = api.getClient("my-app");
 ```
 
@@ -76,6 +84,8 @@ Client client = api.getClient("my-app");
 <TabItem value="csharp" label="C#">
 
 ```csharp
+
+// create a client
 var client = Api.Instance.GetClient("my-app");
 ```
 
@@ -83,6 +93,8 @@ var client = Api.Instance.GetClient("my-app");
 <TabItem value="go" label="Go">
 
 ```go
+
+// create a client
 client := openfeature.NewClient("my-app")
 ```
 
